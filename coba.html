@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poetsen+One&display=swap" rel="stylesheet"><link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poetsen+One&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poetsen+One&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <title>E-Commerce Website</title>
+    <style>
+        /* General Styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to right, #6A11CB, #2575FC);
+            color: #fff;
+        }
+
+        section#beranda.coffee{
+            background-image: url(img6.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position-x: auto;
+            padding-left: 45px;
+            padding-top: 20%;
+            padding-bottom: 20%;
+            height: 100px;
+        }
+        .coffee2{
+            height: 40px;
+            width: 150px;
+            border-radius: 20px;
+            background-color: #dcd3e6;
+            border-style: solid;
+            border-color: #6A11CB;
+        }
+        .coffee2:hover{
+            background-color: #6A11CB;
+            color: #ccc;
+        }
+        .coffee2 a{
+            text-decoration: none;
+            color: #0e0505;
+            font-family: "Poetsen One", sans-serif;
+
+            
+        }
+
+
+section#home.vertical-menu{
+    height: 200px;
+    color: white;
+    background-color: #6A11CB;
+    text-align: center;
+    padding: 20px;
+    overflow-y: auto;
+}
+section#about.container{
+    height: 300px;
+}
+section#products.container{
+    background-color: #6A11CB;
+}
+        .container {
+            max-width: 1200px;
+           display: flex;
+           flex-wrap: wrap;
+           justify-content: center;
+           align-items: center;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header Styles */
+        header {
+            background: linear-gradient(to right, #6A11CB, #2575FC);
+            color: #fff;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        /* Navigation Styles */
+        nav {
+            background: linear-gradient(to right, #6A11CB, #2575FC);
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+            position: relative;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #fff;
+        }
+
+        nav h1 {
+            margin-left: 20px;
+            width: 15%;
+            text-align: left;
+        }
+
+        nav input.search-bar {
+            width: 15%;
+            margin-right: 60px;
+            padding: 5px;
+            border: 1px solid #fff;
+            border-radius: 5px;
+            color:rgb(124, 118, 118);
+            background-color: #fff;
+        }
+
+        nav .menu-button {
+            background: none;
+            border: none;
+            color: #fff;
+            font-size: 1.5em;
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            right: 20px;
+            transform: translateY(-50%);
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            display: none;
+            position: absolute;
+            background-color:rgb(151, 138, 138) ;
+            width: 100%;
+            z-index: 1;
+            top: 100%;
+            left: 0;
+        }
+
+        nav ul li a:hover{
+            color: #0e0505;
+        }
+        nav.active ul {
+            display: block;
+        }
+
+        nav ul li {
+            margin-right: 20px;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            display: block;
+            padding: 10px;
+        }
+
+        .product-container {
+    display: flex;
+    overflow-x: auto; /* Ini akan memunculkan scrollbar horizontal jika produk melebihi lebar container */
+    scroll-behavior: smooth; /* Untuk membuat animasi scrolling */
+}
+
+.product {
+    flex: 0 0 auto; /* Biarkan produk fleksibel dalam lebar */
+    width: 300px; /* Atur lebar produk */
+    margin-right: 20px; 
+    /* Jarak antar produk */
+}
+.product img{
+    height: 200px;
+}
+
+
+        /* Product Card Styles */
+        .product-card {
+            width: 20%;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            margin: 20px;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .product-card img {
+            max-width: 100%;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+
+        .product-card h3 {
+            color: #333;
+        }
+
+        .product-card p {
+            color: #777;
+        }
+
+        .product-card button {
+            background-color: #5923eb;
+            color: #fff;
+            width: 100px;
+            height: 40px;
+            border: none;
+            padding: 5px 10px;
+            border-radius: 3px;
+            cursor: pointer;
+            font-family:"Roboto", sans-serif ;
+        }
+        .product-card button:hover{
+            background-color: #6A11CB;
+            font-style: italic;
+        }
+
+        /* Footer Styles */
+        footer {
+            background: linear-gradient(to right, #6A11CB, #2575FC);
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+        }
+
+        /* Contact Form Styles */
+        .contact-form {
+            margin: 20px;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .contact-form input,
+        .contact-form textarea {
+            width: 95%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+        }
+
+        .contact-form button {
+            background-color: #333;
+            width: 70px;
+            height: 40px;
+            color: #fff;
+            border: none;
+            padding: 5px 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-family: "Poetsen One",
+sans-serif;
+        }
+        .contact-form button:hover{
+            background-color: #6A11CB;
+            font-style: italic;
+        }
+
+
+
+
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <h1>Luxury Shop</h1>
+            
+            <input type="text" class="search-bar" placeholder="Search for products">
+            <button class="menu-button" onclick="toggleMenu()">&#9776;</button>
+            <ul>
+                <li><a href="#">HOME</a></li>
+                <li><a href="#about">ABOUT</a></li>
+                <li><a href="#products">PRODUCT</a></li>
+                <li><a href="#contact">CONTACT</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section id="beranda" class="coffee">
+        <h1>Luxury Shop</h1>
+        <h3>Rasakan kenikmatan disetiap aromanya</h3>
+        <button class="coffee2"><a href="#home">learn more</a></button>
+    </section>
+    <section id="home" class="vertical-menu">
+        <h1>Luxury Shop</h1>
+        <p>Mari rasakan keanggunan dan kepuasan yang tiada tara di dalam perjalanan cita rasa kopi Anda. Selamat datang di luxury shop kami, di mana setiap produk yang kami tawarkan adalah ciptaan keistimewaan. Dengan koleksi eksklusif kami, Anda akan menemukan coffee cup yang tidak hanya menjanjikan sensasi kemewahan, tetapi juga menjelajahi dunia rasa yang begitu beragam. Mulai dari aroma yang memikat hingga cita rasa yang memanjakan lidah, setiap tegukan adalah perpaduan sempurna antara kelezatan dan keindahan. Temukan pengalaman baru dalam menikmati kopi dengan gaya yang elegan dan penuh keanggunan hanya di luxury shop kami.</p>
+
+    </section>
+    <section id="about" class="container">
+       <div class="product-container">
+    <div class="product" id="product1">
+        <!-- Konten produk -->
+        <img src="img1.jpg" alt="">
+    </div>
+    <div class="product" id="product2">
+        <!-- Konten produk -->
+        <img src="img2.jpg" alt="">
+    </div>
+    <div class="product" id="product2">
+        <!-- Konten produk -->
+        <img src="img3.jpg" alt="">
+    </div><div class="product" id="product2">
+        <!-- Konten produk -->
+        <img src="img4.jpg" alt="">
+    </div><div class="product" id="product2">
+        <!-- Konten produk -->
+        <img src="img2.jpg" alt="">
+    </div>
+    <!-- Tambahkan lebih banyak produk jika diperlukan -->
+</div>
+
+
+    </section>
+    <section id="products" class="container">
+        <h2>Products</h2>
+    </section>
+    <section id="products" class="container">
+        
+        <div class="product-card">
+            <img src="product1.jpg" alt="Product 1">
+            <h3>Espresso</h3>
+            <p>$19.99</p>
+            <button>Add to Cart</button>
+        </div>
+        <div class="product-card">
+            <img src="product2.jpg" alt="Americano">
+            <h3>Cappuccino</h3>
+            <p>$29.99</p>
+            <button>Add to Cart</button>
+        </div>
+        <div class="product-card">
+            <img src="product3.jpg" alt="Product 3">
+            <h3>Long Black</h3>
+            <p>$39.99</p>
+            <button>Add to Cart</button>
+        </div>
+        <div class="product-card">
+            <img src="product1.jpg" alt="Product 1">
+            <h3>Americano</h3>
+            <p>$19.99</p>
+            <button>Add to Cart</button>
+        </div>
+        <div class="product-card">
+            <img src="product2.jpg" alt="Product 2">
+            <h3>Cold Brew</h3>
+            <p>$29.99</p>
+            <button>Add to Cart</button>
+        </div>
+        <div class="product-card">
+            <img src="product3.jpg" alt="Product 3">
+            <h3>Mocha Latte</h3>
+            <p>$39.99</p>
+            <button>Add to Cart</button>
+        </div>
+    </section>
+
+    <section id="contact" class="container">
+        <h2>Contact Us</h2>
+        <div class="contact-form">
+            <h3>Get in Touch</h3>
+            <form>
+                <input type="text" placeholder="Name">
+                <input type="email" placeholder="Email">
+                <textarea placeholder="Message"></textarea>
+                <button>Send</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 E-Commerce Website</p>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            const nav = document.querySelector('nav');
+            nav.classList.toggle('active');
+        }
+        // Menggulir produk ke kiri
+function scrollLeft() {
+    document.querySelector('.product-container').scrollBy({
+        left: -350, // Atur jumlah piksel yang ingin digulir
+        behavior: 'smooth' // Animasi scrolling
+    });
+}
+
+// Menggulir produk ke kanan
+function scrollRight() {
+    document.querySelector('.product-container').scrollBy({
+        left: 350, // Atur jumlah piksel yang ingin digulir
+        behavior: 'smooth' // Animasi scrolling
+    });
+}
+
+    </script>
+    
+</body>
+</html>
+
