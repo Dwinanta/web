@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dwinanta Capital</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>DWINANTA CAPITAL</h1>
+    <button class="hamburger" onclick="toggleMenu()">☰</button>
+
+    <nav class="nav-menu" id="navMenu">
+      <button class="close-btn" onclick="toggleMenu()">×</button>
+      <a href="#">Home</a>
+      <a href="#">Investments</a>
+      <a href="#strategi">Strategy</a>
+      <a href="#kontak">Contact</a>
+      <a href="#testimoni">Testimoni</a>
+    </nav>
+
+    <div id="overlay" onclick="toggleMenu()" style="display: none;"></div>
+  </header>
+
+  <section class="hero">
+    <h2>INVESTASI MASA DEPAN</h2>
+    <p>Fokus pada Crypto, Saham US, IDX & Emas</p>
+  </section>
+
+  <section id="about">
+    <h1>Tentang Kami</h1>
+    <p>Dwinanta Capital adalah perusahaan investasi independen yang berfokus pada alokasi aset di berbagai kelas seperti kripto, saham global, saham lokal, dan emas. Misi kami adalah membantu investor mencapai kinerja optimal melalui pendekatan kuantitatif dan berbasis data.</p>
+  </section>
+
+  <div class="grid">
+    <div class="card">
+      <h3>Crypto</h3>
+      <p>Strategi analisis teknikal & fundamental di proyek blockchain</p>
+    </div>
+    <div class="card">
+      <h3>Saham US</h3>
+      <p>Portofolio berbasis sektor (nonvolatile) Nasdaq & NYSE</p>
+    </div>
+    <div class="card">
+      <h3>Saham Indonesia</h3>
+      <p>Indeks IDX30, LOAS dan emerging companies pilihan lokal</p>
+    </div>
+    <div class="card">
+      <h3>Gold</h3>
+      <p>Aset safe haven untuk lindung nilai terhadap volatilitas pasar</p>
+    </div>
+
+  <section id="testimoni">
+    <h1>Testimoni Trading</h1>
+    <div class="grid">
+      <div class="card">
+        <img src="IMG-20250620-WA0005.jpg" alt="Testimoni Bitget 1" style="width:100%">
+      </div>
+      <div class="card">
+        <img src="IMG-20250620-WA0006.jpg" alt="Testimoni Bitget 2" style="width:100%">
+      </div>
+      <!-- Add more images as needed -->
+    </div>
+  </section>
+
+    <div class="chart-container">
+      <h3>Portofolio & Alokasi Aset</h3>
+      <canvas id="donutChart"></canvas>
+    </div>
+    <div class="chart-container">
+      <h3>Pertumbuhan Portofolio</h3>
+      <canvas id="lineChart"></canvas>
+    </div>
+  </div>
+
+  <section id="strategi">
+    <h1>Strategi Investasi</h1>
+    <p>Kami menggunakan pendekatan kuantitatif dan analitis untuk memaksimalkan potensi dari berbagai kelas aset.</p>
+
+    <div class="grid">
+      <div class="card">
+        <h3>Macro View</h3>
+        <p>Analisa kondisi ekonomi global untuk menentukan alokasi aset secara proporsional.</p>
+      </div>
+      <div class="card">
+        <h3>Quant Model</h3>
+        <p>Model prediktif menggunakan data AI & machine learning untuk identifikasi tren.</p>
+      </div>
+      <div class="card">
+        <h3>Risk Management</h3>
+        <p>Manajemen risiko dinamis berdasarkan volatilitas dan korelasi antar aset.</p>
+      </div>
+      <div class="card">
+        <h3>Long-Term Vision</h3>
+        <p>Fokus pada pertumbuhan jangka panjang, bukan hanya tren sesaat.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="profile-section">
+    <div class="profile-pic">
+      <img src="Leonardo.jpg" alt="Foto Profil">
+    </div>
+    <div class="name">Dwinanta</div>
+    <div class="bio">
+      Screening crypto assets since 2024.<br>
+      Permanent Capital for long-term alpha.<br>
+      Not a financial advisor.<br>
+      Track record & data below.
+    </div>
+  </section>
+
+  <section id="kontak">
+    <h1>Hubungi Kami</h1>
+    <p>Ingin berdiskusi lebih lanjut? Silakan kirim pesan melalui formulir di bawah ini.</p>
+
+    <div class="grid">
+      <form class="card" id="contactForm" onsubmit="sendToWhatsApp(); return false;">
+        <label>Nama:</label><br>
+        <input type="text" id="name" required><br>
+        <label>Email:</label><br>
+        <input type="email" id="email" required><br>
+        <label>Pesan:</label><br>
+        <textarea id="message" rows="5" required></textarea><br><br>
+        <button type="submit">Kirim</button>
+      </form>
+    </div>
+  </section>
+
+  <footer>
+    &copy; 2025 Digital Consulting. All rights reserved.
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
