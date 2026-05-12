@@ -171,6 +171,21 @@ form input, form textarea {
   margin-bottom: 1rem;
 }
 
+.button {
+  display: inline-block;
+  padding: 0.9rem 1.6rem;
+  border-radius: 999px;
+  background: #5b6cff;
+  color: white;
+  text-decoration: none;
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.button:hover {
+  transform: translateY(-2px);
+  background: #3e50ff;
+}
+
 form button {
   background: blue;
   color: white;
